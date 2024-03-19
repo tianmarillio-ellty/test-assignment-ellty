@@ -19,11 +19,8 @@ const PageSelectorItem: FC<PageSelectorProps> = ({
       className="group flex h-[42px] w-full cursor-pointer items-center justify-between py-[8px] pl-[22px] pr-[15px]"
       onClick={() => toggleChecked(pageId)}
     >
-      <label htmlFor={`page-${pageId}`}>{title}</label>
-      <CustomCheckbox
-        id={`page-${pageId}`}
-        isChecked={isChecked}
-       />
+      <label>{title}</label>
+      <CustomCheckbox isChecked={isChecked} />
     </div>
   );
 };

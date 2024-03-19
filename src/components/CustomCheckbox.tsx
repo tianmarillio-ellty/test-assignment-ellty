@@ -1,15 +1,13 @@
 import { FC } from 'react';
 
 interface CustomCheckboxProps {
-  id: string;
   isChecked: boolean;
 }
 
-const CustomCheckbox: FC<CustomCheckboxProps> = ({ id, isChecked }) => {
+const CustomCheckbox: FC<CustomCheckboxProps> = ({ isChecked }) => {
   return (
     <div className="relative flex items-center">
       <input
-        id={id}
         type="checkbox"
         className="peer size-[23px] appearance-none rounded-md border-[1px] border-[#CDCDCD] transition-all
         checked:border-none
