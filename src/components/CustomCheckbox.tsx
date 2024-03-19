@@ -13,9 +13,8 @@ const CustomCheckbox: FC<CustomCheckboxProps> = ({
     <div className="relative flex items-center">
       <input
         type="checkbox"
-        className={`peer size-[23px] appearance-none rounded-md border-[1px] border-[#CDCDCD] transition-all
-        checked:border-none
-        checked:bg-[#2469F6]
+        className={`peer size-[23px] appearance-none rounded-md border-[1px] border-[#CDCDCD]
+        checked:border-none checked:bg-[#2469F6]        
         group-hover:border-[#BDBDBD] checked:group-hover:bg-[#5087F8]
         ${showShadow ? 'shadow-[0_0_0_3px_#c0c6d4]' : ''}
         `}
