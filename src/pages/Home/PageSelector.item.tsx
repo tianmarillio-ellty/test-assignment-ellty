@@ -21,6 +21,7 @@ const PageSelectorItem: FC<PageSelectorProps> = ({
       className="group flex h-[42px] w-full cursor-pointer items-center justify-between py-[8px] pl-[22px] pr-[15px]"
       onMouseDown={() => setShowShadow(true)}
       onMouseUp={() => setShowShadow(false)}
+      onMouseOut={() => setShowShadow(false)}
       onClick={() => toggleChecked(pageId)}
     >
       <p>{title}</p>

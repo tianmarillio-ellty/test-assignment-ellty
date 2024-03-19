@@ -16,7 +16,7 @@ const CustomCheckbox: FC<CustomCheckboxProps> = ({
         className={`peer size-[23px] appearance-none rounded-md border-[1px] border-[#CDCDCD]
         checked:border-none checked:bg-[#2469F6]        
         group-hover:border-[#BDBDBD] checked:group-hover:bg-[#5087F8]
-        ${showShadow ? 'shadow-[0_0_0_3px_#c0c6d4]' : ''}
+        ${showShadow ? 'shadow-[0_0_0_2px_#c0c6d4]' : ''}
         `}
         checked={isChecked}
         readOnly
