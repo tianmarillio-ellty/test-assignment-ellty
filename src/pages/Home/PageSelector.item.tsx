@@ -1,5 +1,5 @@
 import CustomCheckbox from '@/components/CustomCheckbox';
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
 interface PageSelectorProps {
   pageId: number;
@@ -14,13 +14,17 @@ const PageSelectorItem: FC<PageSelectorProps> = ({
   isChecked,
   toggleChecked,
 }) => {
+  const [showShadow, setShowShadow] = useState(false);
+
   return (
     <div
       className="group flex h-[42px] w-full cursor-pointer items-center justify-between py-[8px] pl-[22px] pr-[15px]"
+      onMouseDown={() => setShowShadow(true)}
+      onMouseUp={() => setShowShadow(false)}
       onClick={() => toggleChecked(pageId)}
     >
       <p>{title}</p>
-      <CustomCheckbox isChecked={isChecked} />
+      <CustomCheckbox isChecked={isChecked} showShadow={showShadow} />
     </div>
   );
 };
