@@ -15,7 +15,7 @@ const AllPagesSelector: FC<AllPagesSelectorProps> = ({
       className="group flex h-[42px] w-full cursor-pointer items-center justify-between py-[8px] pl-[22px] pr-[15px]"
       onClick={onClick}
     >
-      <label>All pages</label>
+      <p>All pages</p>
       <CustomCheckbox isChecked={isChecked} />
     </div>
   );
