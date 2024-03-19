@@ -1,3 +1,4 @@
+import CustomCheckbox from '@/components/CustomCheckbox';
 import { FC } from 'react';
 
 interface PageSelectorProps {
@@ -15,15 +16,14 @@ const PageSelectorItem: FC<PageSelectorProps> = ({
 }) => {
   return (
     <div
-      className="flex h-[42px] w-full cursor-pointer justify-between py-[8px] pl-[22px] pr-[15px]"
+      className="group flex h-[42px] w-full cursor-pointer items-center justify-between py-[8px] pl-[22px] pr-[15px]"
       onClick={() => toggleChecked(pageId)}
     >
-      <p>{title}</p>
-      <input
-        type="checkbox"
-        className="size-[23px] rounded-md border-[1px] border-[#CDCDCD] accent-[#2469F6]"
-        checked={isChecked}
-      />
+      <label htmlFor={`page-${pageId}`}>{title}</label>
+      <CustomCheckbox
+        id={`page-${pageId}`}
+        isChecked={isChecked}
+       />
     </div>
   );
 };

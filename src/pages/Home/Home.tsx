@@ -5,11 +5,6 @@ import PageSelectorItem from './PageSelector.item';
 import SubmitSection from './SubmitSection';
 import HorizontalStroke from '@/components/HorizontalStroke';
 
-// TODO: Custom checkbox
-// TODO: pseudo classes: hover, selected, etc
-// TODO: button interaction
-// TODO: done button
-
 const Home = () => {
   const { pages, isSelectAll, toggleChecked, toggleIsSelectAll } =
     useHomeHooks();
@@ -17,7 +12,7 @@ const Home = () => {
   return (
     <main className="container mx-auto flex justify-center pt-[161px]">
       <article className="h-[326px] w-[370px] rounded-md border-[1px] border-[#EEEEEE] py-[10px] shadow-[0_8px_15px_#1414141F,0_0_4px_#1414141F]">
-        <AllPagesSelector checked={isSelectAll} onClick={toggleIsSelectAll} />
+        <AllPagesSelector isChecked={isSelectAll} onClick={toggleIsSelectAll} />
 
         <HorizontalStroke />
 
